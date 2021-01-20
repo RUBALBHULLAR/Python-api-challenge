@@ -1,4 +1,4 @@
-### What's the Weather Like?
+## What's the Weather Like?
 
 ![Equator](Images/equatorsign.png)
 
