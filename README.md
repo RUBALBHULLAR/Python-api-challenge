@@ -21,7 +21,6 @@ Your objective is to build a series of scatter plots to showcase the following r
 
 Your final notebook must:
 
-* Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
 * Perform a weather check on each of the cities using a series of successive API calls.
 * Include a print log of each city as it's being processed with the city number and city name.
 * Save both a CSV of all data retrieved and png images for each scatter plot.
@@ -34,18 +33,19 @@ As final considerations:
 * You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axes Labels.
 * See [Example Solution](WeatherPy_Example.pdf) for a reference on expected format.
 
-## Hints and Considerations
+### Analysis
+* As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere. This may be due to the tilt of the earth.
+* There is no strong relationship between latitude and cloudiness. However, it is interesting to see that a strong band of cities sits at 0, 80, and 100% cloudiness.
+* There is no strong relationship between latitude and wind speed. However, in northern hemispheres there is a flurry of cities with over 20 mph of wind.
 
-* The city data is generated based on random coordinates; as such, your outputs will not be an exact match to the provided starter notebook.
+### Observable Trends
+* Collecting weather data from random and diverse cities around the world using the OpenWeatherMap API,the data illustrated maximum temperature(in Fahrenheit),humidity(%),cloudiness(%)and wind speed(in mph)with the corresponding city,and with respect to the geo-coordinate,Latitude.
+* There seems to be little to no correlation between humidity and Latitude as well as with cloudiness and Latitude. The scatter plot visualizations display a considerable amount of heterogeneity even at similar Latitudes.
+* Finally, wind speeds increase in the upper and lower halves on the hemisphere.
+* As the correlation coeffient and linear regression model shows a strong negative correlation between latitude and northern hemisphere. Moreover,in southern hemisphere the correlation coefficient and linear regression model shows a positive correlation between latitude and maximum temperature.
+* And the correlation coefficent and linear regression model for humidity vs latitude shows a weak positive correlation for both hemispheres.
+* The correlation coefficient and linear regression model show a weak positive correlation between cloudiness and latitude in the northern hemisphere and weak positive correlation in the southern hemisphere.
+* The correlation coefficient and linear regression model show a weak positive correlation between wind speed(mph) and latitude in the northern hemisphere and shows an almost moderate negative correlation between wind speed(mph) and latitude in the southern hemisphere.
 
-* You may want to start this assignment by refreshing yourself on the [geographic coordinate system](http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/about-geographic-coordinate-systems.htm).
-
-* Next, spend the requisite time necessary to study the OpenWeatherMap API. Based on your initial study, you should be able to answer  basic questions about the API: Where do you request the API key? Which Weather API in particular will you need? What URL endpoints does it expect? What JSON structure does it respond with? Before you write a line of code, you should be aiming to have a crystal clear understanding of your intended outcome.
-
-* A starter code for Citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works: [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library into your analysis, start by creating simple test cases outside your main script to confirm that you are using it correctly. Too often, when introduced to a new library, students get bogged down by the most minor of errors -- spending hours investigating their entire code -- when, in fact, a simple and focused test would have shown their basic utilization of the library was wrong from the start. Don't let this be you!
-
-* Part of our expectation in this challenge is that you will use critical thinking skills to understand how and why we're recommending the tools we are. What is Citipy for? Why would you use it in conjunction with the OpenWeatherMap API? How would you do so?
-
-* In building your script, pay attention to the cities you are using in your query pool. Are you getting coverage of the full gamut of latitudes and longitudes? Or are you simply choosing 500 cities concentrated in one region of the world? Even if you were a geographic genius, simply rattling 500 cities based on your human selection would create a biased dataset. Be thinking of how you should counter this. (Hint: Consider the full range of latitudes).
 
 
